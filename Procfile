@@ -1,1 +1,1 @@
-web:gunicorn webmap.wsgi
+web: gunicorn webmap.wsgi
