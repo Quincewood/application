@@ -5,7 +5,7 @@ import folium
 
 def home(request):
     crd_dir = os.path.join(os.getcwd(), 'media', 'crd')
-    m = folium.Map(location=[-6.161184, 35.745426], zoom_control=10, height=1500)
+    m = folium.Map(location=[-6.161184, 35.745426], zoom_start=8, height=1500)
 
     folium.GeoJson(os.path.join(crd_dir, 'dealers.geojson'), name='dealers', popup=folium.GeoJsonPopup(fields=["Name of re"] + ["Region"] + ["Ward"])).add_to(m)
 
